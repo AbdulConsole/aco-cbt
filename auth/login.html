@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="../styles/main.css" type="text/css" />
+  <link rel="stylesheet" href="../styles/header-footer.css" type="text/css" />
+  
+  <title>Adeshina College of Education CBT Test Centre</title>
+  
+</head>
+<body>
+
+  <header>
+    <div class="logo">Adeshina CBT</div>
+    <nav id="nav-menu">
+      <a href="/index.html">Home</a>
+      <a href="/public/aboutus.html">About</a>
+      <a href="/public/contactus.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <div class="container" style="max-width: 300px; margin: 3rem auto; padding: 2rem; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+  <h2 style="color: #007BFF; text-align: center; margin-bottom: 1rem;">Student Login</h2>
+
+  <p style="text-align: center; font-size: 0.95rem; color: red; margin-bottom: 1.5rem;">
+    <strong style="color:#333">Note:</strong> Use your <strong>surname</strong> as the username and your <strong>matric number</strong> as the password to log in.
+  </p>
+
+  <form style="display: flex; flex-direction: column; gap: 1rem;">
+    <div>
+      <label for="surname" style="font-weight: 500;">Surname (Username)</label>
+      <input type="text" id="surname" name="surname" required placeholder="Enter your surname"
+        style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <div>
+      <label for="matric" style="font-weight: 500;">Matric Number (Password)</label>
+      <input type="password" id="matric" name="matric" required placeholder="Enter your matric number"
+        style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px;">
+    </div>
+
+    <button type="submit"
+      style="background-color: #007BFF; color: white; padding: 0.75rem; border: none; border-radius: 5px; cursor: pointer;">
+      Login
+    </button>
+  </form>
+</div>
+
+  <footer>
+    <p>Contact: <a href="mailto:abdulconsole@gmail.com">abdulconsole@gmail.com</a> | 
+    <a href="tel:+2348103575377">+2348103575377</a></p>
+    <p>&copy; 2025 Adeshina College of Education CBT Centre</p>
+  </footer>
+  
+
+  <script>
+    const modal = document.getElementById("modal");
+
+    function openModal() {
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target == modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>

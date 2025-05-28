@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="/styles/main.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header-footer.css" type="text/css" />
+  <title>Adeshina College of Education CBT Test Centre</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Adeshina CBT</div>
+    <nav id="nav-menu">
+      <a href="/index.html">Home</a>
+      <a href="/public/aboutus.html">About</a>
+      <a href="/public/contactus.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Adeshina College of Education CBT Test Centre</h1>
+    <p>Students can take secure and efficient computer-based tests here.</p>
+    <button class="btn btn-primary" onclick="openModal()">Get Started</button>
+  </section>
+
+  <!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>Login / Signup</h2>
+    <p>Select an option below to continue:</p>
+    <button class="btn btn-outline" style="margin: 0.5rem;" onclick="window.location.href='auth/login.html'">Login</button>
+    <button class="btn btn-outline" style="margin: 0.5rem;" onclick="window.location.href='auth/register.html'">Signup</button><br><br>
+    <button class="btn btn-primary" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+  <footer>
+    <p>Contact: <a href="mailto:abdulconsole@gmail.com">abdulconsole@gmail.com</a> | 
+    <a href="tel:+2348103575377">+2348103575377</a></p>
+    <p>&copy; 2025 Adeshina College of Education CBT Centre</p>
+  </footer>
+  
+
+  <script>
+    const modal = document.getElementById("modal");
+
+    function openModal() {
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target == modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>

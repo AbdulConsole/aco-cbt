@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="../styles/main.css" type="text/css" />
+  <link rel="stylesheet" href="../styles/header-footer.css" type="text/css" />
+  
+  <title>Adeshina College of Education CBT Test Centre</title>
+  
+</head>
+<body>
+
+  <header>
+    <div class="logo">Adeshina CBT</div>
+    <nav id="nav-menu">
+      <a href="/index.html">Home</a>
+      <a href="/public/aboutus.html">About</a>
+      <a href="/public/contactus.html">Contact</a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+  
+  <div class="container" style="max-width: 900px; margin: 2rem auto; padding: 2rem;">
+  <h2 style="color: #007BFF; text-align: center; margin-bottom: 1.5rem;">About Us</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+    <div style="flex: 1; min-width: 250px;">
+      <img src="../images/school.jpg" alt="About Adeshina CBT Centre" style="width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    </div>
+    <div style="flex: 2; min-width: 250px;">
+      <p style="font-size: 1rem; line-height: 1.7;">
+        <strong>Adeshina College of Education CBT Test Centre</strong> is a modern facility dedicated to delivering reliable and seamless computer-based testing for students. We are committed to providing a secure, user-friendly, and efficient environment for academic assessments.
+      </p>
+      <p style="font-size: 1rem; line-height: 1.7;">
+        Our mission is to enhance the learning experience through technology and innovation, offering a platform where students can confidently take tests and improve their academic journey. We uphold integrity, transparency, and excellence in every test conducted.
+      </p>
+    </div>
+  </div>
+</div>
+
+  
+
+  <footer>
+    <p>Contact: <a href="mailto:abdulconsole@gmail.com">abdulconsole@gmail.com</a> | 
+    <a href="tel:+2348103575377">+2348103575377</a></p>
+    <p>&copy; 2025 Adeshina College of Education CBT Centre</p>
+  </footer>
+  
+
+  <script>
+    const modal = document.getElementById("modal");
+
+    function openModal() {
+      modal.style.display = "flex";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    const toggle = document.getElementById("menu-toggle");
+    const nav = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target == modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
